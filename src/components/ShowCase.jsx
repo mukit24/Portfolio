@@ -19,7 +19,7 @@ const ShowCase = () => {
                             <Link to={'/projects'}>
                                 <Button variant='outline-success me-2'><i className='fas fa-file-code me-1'></i> Projects</Button>
                             </Link>
-                            <Button variant='dark'><i className='fab fa-github me-1'></i> Github</Button>
+                            <a href="https://github.com/mukit24" target="_blank" rel="noreferrer"><Button variant='dark'><i className='fab fa-github me-1'></i> Github</Button></a>
                         </div>
                     </Col>
                     <Col md={6}>

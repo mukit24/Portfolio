@@ -40,12 +40,12 @@ const Header = () => {
                             <LinkContainer to={'/projects'}>
                                 <Nav.Link>Projects</Nav.Link>
                             </LinkContainer>
-                            <Nav.Link>
-                                <a href="#"><Button variant='success btn-sm'><i className='fab fa-github me-1'></i> Github Profile</Button></a>
-                            </Nav.Link>
-                            <Nav.Link>
-                                <a href="#"><Button variant='primary btn-sm'><i className='fas fa-file-download me-1'></i> Download CV</Button></a>
-                            </Nav.Link>
+                            <a href="https://github.com/mukit24" className='py-2' target="_blank" rel="noreferrer">
+                                <Button variant='success btn-sm'><i className='fab fa-github me-1'></i> Github Profile</Button>
+                            </a>
+
+                            <a href="/"><Button variant='primary btn-sm'><i className='fas fa-file-download me-1'></i> Download CV</Button></a>
+
 
 
                         </Nav>

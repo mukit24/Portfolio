@@ -15,7 +15,7 @@ const ProjectDetails = () => {
         axios.get(baseURL).then((response) => {
             setproject({ loader: false, details: response.data })
         });
-    }, [])
+    }, [baseURL])
 
     const { loader, details } = project
     return (
@@ -29,7 +29,7 @@ const ProjectDetails = () => {
                         <Col md={5} className='py-2 py-sm-4'>
                             <h4 className='header2'>{details.title}</h4>
                             <h5 className="d-flex flex-wrap">
-                                {details.tags.map((tag, index) => (
+                                {details.tags && details.tags.map((tag, index) => (
                                     <Badge variant='danger' key={index} className='m-1'>{tag.name}</Badge>
                                 ))}
                             </h5>

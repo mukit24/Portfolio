@@ -2,14 +2,14 @@ import React from 'react'
 import { Container, Row, Col, Button, ListGroup } from 'react-bootstrap'
 import Skills from './Skills'
 const About = () => {
-    const skills = ['Django', 'Django-Rest-Framework', 'Python', 'React', 'Redux', 'Javascript', 'Rest API', 'JSON', 'JSON Web Token', 'Bootstrap 5', 'React-Bootstrap', 'Ajax', 'Jquery', 'HTML 5', 'CSS 3', 'Sass','Git', 'Blockchain', 'Hyperledger Fabric', 'Web Scraping', 'Machine Learning', 'DBMS', 'SQL','Data Structure', 'C', 'C++']
+    const skills = ['Django', 'Django-Rest-Framework', 'Python', 'React', 'Redux', 'Redux-Toolkit', 'Javascript', 'Rest API', 'JSON', 'JSON Web Token', 'Bootstrap 5', 'React-Bootstrap', 'Ajax', 'Jquery', 'HTML 5', 'CSS 3', 'Sass','Git', 'Blockchain', 'Hyperledger Fabric', 'Web Scraping', 'Machine Learning', 'DBMS', 'SQL','Data Structure', 'C', 'C++']
 
     return (
         <section className='bg1 p-4'>
             <Container>
                 <h2 className='header2 text-center'>About Me</h2>
                 <div className="text-center mb-3">
-                    <a href="#"><Button variant='dark btn-sm'><i className='fas fa-file-download me-1'></i> Download CV</Button></a>
+                    <a href="/"><Button variant='dark btn-sm'><i className='fas fa-file-download me-1'></i> Download CV</Button></a>
                 </div>
                 <Row className='g-4'>
                     <Col md={6}>
@@ -30,9 +30,9 @@ const About = () => {
                             <ListGroup.Item>
                                 <h5><strong>Email:</strong> pranto1824@cseku.ac.bd</h5>
                             </ListGroup.Item>
-                            <ListGroup.Item>
+                            {/* <ListGroup.Item>
                                 <h5><strong>Github:</strong> <a href="https://github.com/mukit24" className='text-decoration-none' target="_blank" rel="noreferrer">Click Here</a></h5>
-                            </ListGroup.Item>
+                            </ListGroup.Item> */}
                         </ListGroup>
 
                     </Col>
