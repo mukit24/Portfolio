@@ -9,7 +9,7 @@ const ProjectDetails = () => {
     const [project, setproject] = useState({ loader: true, details: [] })
     const params = useParams()
 
-    const baseURL = `http://127.0.0.1:8000/projects/${params.id}`;
+    const baseURL = `https://mukitsportfolio.pythonanywhere.com/projects/${params.id}`;
 
     useEffect(() => {
         axios.get(baseURL).then((response) => {
@@ -46,9 +46,9 @@ const ProjectDetails = () => {
                             <Image src={details.cover} alt={details.title} fluid />
                         </Col>
                     </Row>
-                    <h3 className='header2 text-center py-4'>Description</h3>
+                    <h3 className='header2 text-center py-4 text-success'>Description</h3>
                     <Row className='justify-content-center'>
-                        <Col md={8}>
+                        <Col md={9}>
                             <div dangerouslySetInnerHTML={{ __html: details.description }} />
                         </Col>
                     </Row>

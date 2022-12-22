@@ -12,7 +12,7 @@ const ShowCase = () => {
                         <div className='header2'>
                             <h1>Hello, </h1>
                             <h1>I'm <span className='text-primary'>MUKIT</span></h1>
-                            <h1>I'm a <span className='text-success'>FULL STACK DEVELOPER</span></h1>
+                            <h1 className='dev'>I'm a <span className='text-success'>FULL STACK DEVELOPER</span></h1>
                             <p className='lead text-muted'>Major Proficiency in <span className='color1'>ReactJS</span> and <span className='color1'>Django</span></p>
                         </div>
                         <div className="d-flex header2">

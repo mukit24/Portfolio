@@ -4,11 +4,12 @@ import { Container, Row, Col, Button, Alert } from 'react-bootstrap'
 import Project from './ProjectCard'
 import Loader from './Loader'
 import { Link } from 'react-router-dom'
+import AlertBox from './AlertBox'
 
 const TopProjects = () => {
 
     const [projects, setprojects] = useState({ loader: true, projectList: [], error: false })
-    const baseURL = "http://127.0.0.1:8000/projects/top/";
+    const baseURL = "https://mukitsportfolio.pythonanywhere.com/projects/top/";
 
     useEffect(() => {
         axios.get(baseURL).then((response) => {
@@ -22,7 +23,8 @@ const TopProjects = () => {
         <section className='bg1 p-4'>
             <Container>
                 <h2 className='header2 text-center pb-3'>Top Projects</h2>
-                <Row>
+                <AlertBox />
+                <Row className='g-3'>
                     {projects.loader && <Loader />}
                     {projects.error && (
                         <Alert variant='danger text-center fw-bold'>Sorry! Unable To Fetch Projects From API! </Alert>

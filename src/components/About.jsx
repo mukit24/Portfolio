@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Button, ListGroup } from 'react-bootstrap'
 import Skills from './Skills'
 const About = () => {
-    const skills = ['Django', 'Django-Rest-Framework', 'Python', 'React', 'Redux', 'Redux-Toolkit', 'Javascript', 'Rest API', 'JSON', 'JSON Web Token', 'Bootstrap 5', 'React-Bootstrap', 'Ajax', 'Jquery', 'HTML 5', 'CSS 3', 'Sass','Git', 'Blockchain', 'Hyperledger Fabric', 'Web Scraping', 'Machine Learning', 'DBMS', 'SQL','Data Structure', 'C', 'C++']
+    const skills = ['Django', 'Django-Rest-Framework', 'Python', 'React', 'Redux', 'Redux-Toolkit', 'Javascript', 'Rest API', 'JSON', 'JWT', 'Bootstrap 5', 'React-Bootstrap', 'Ajax', 'Jquery', 'HTML 5', 'CSS 3', 'Sass','Git', 'Blockchain', 'Hyperledger Fabric', 'Web Scraping', 'Machine Learning', 'DBMS', 'SQL','Data Structure', 'C', 'C++']
 
     return (
         <section className='bg1 p-4'>
@@ -38,7 +38,7 @@ const About = () => {
                     </Col>
                     <Col md={6}>
                         <h3 className='header2 color1 text-center'>Technical Skills <i className='fas fa-code ms-1'></i></h3>
-                        <div className="d-flex flex-wrap justify-content-center py-2 py-sm-4">
+                        <div className="skills-flex d-flex flex-wrap justify-content-center py-2 py-sm-4">
                             {skills.map((skill, index) => (
                                 <Skills name={skill} />
                             ))}

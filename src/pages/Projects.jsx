@@ -3,15 +3,18 @@ import axios from 'axios'
 import { Container, Row, Col, Form, FloatingLabel, Alert } from 'react-bootstrap'
 import Project from '../components/ProjectCard'
 import Loader from '../components/Loader'
+import AlertBox from '../components/AlertBox'
 
-const Projects = () => {
+const Projects = ({tags}) => {
   const [projects, setprojects] = useState({ loader: true, projectList: [], error: false })
 
   const [tagSelect, setTagSelect] = useState('all')
 
-  const baseURL = "http://127.0.0.1:8000/projects";
+  const baseURL = "https://mukitsportfolio.pythonanywhere.com/projects";
 
   useEffect(() => {
+    setprojects({loader: true, projectList: [], error: false})
+
     axios.get(`${baseURL}/${tagSelect}/`).then((response) => {
       setprojects({ loader: false, projectList: response.data })
     }).catch((error)=>{
@@ -21,22 +24,11 @@ const Projects = () => {
   }, [tagSelect])
 
 
-  const tagSet = new Set()
-
-  for (let i in projects.projectList) {
-    const tagList = projects.projectList[i].tags;
-    for (let j in tagList) {
-      tagSet.add(tagList[j].name)
-    }
-  }
-
-  const tags = [...tagSet]
-
-
   return (
     <section className='bg1 p-4'>
       <Container>
         <h2 className='header2 text-center pb-1'>All Projects</h2>
+        <AlertBox />
         {projects.error && (
           <Alert variant='danger text-center fw-bold'>Sorry! Unable To Fetch Projects From API! </Alert>
         )}
@@ -52,7 +44,7 @@ const Projects = () => {
             </FloatingLabel>
           </Col>
         </Row>
-        <Row>
+        <Row className='g-3'>
           {projects.loader && <Loader />}
           {projects.projectList.map((project) => (
             <Col md={4} key={project.id}>

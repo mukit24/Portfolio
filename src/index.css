@@ -33,3 +33,16 @@
 .list-group-item h5{
   margin-bottom: 0px;
 }
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand{
+    font-size: 1.1rem !important;
+  }
+  .navbar-brand img{
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .load{
+    font-size: smaller;
+  }
+}
